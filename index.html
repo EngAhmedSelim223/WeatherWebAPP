@@ -119,25 +119,7 @@
     </a>
   </footer>
   <!-- End Footer -->
-  <script>
-    document.addEventListener('DOMContentLoaded', async () => {
-      if ('geolocation' in navigator) {
-        navigator.geolocation.getCurrentPosition(async (position) => {
-          const { latitude, longitude } = position.coords;
-          // Assuming getWeatherToday can accept latitude and longitude as input
-          // If not, you might need to use a service to convert coords to a city name
-          const weatherData = await getWeatherToday(`${latitude},${longitude}`);
-          displayWeather(weatherData);
-        }, (error) => {
-          console.error('Geolocation error:', error);
-          // Handle error or provide a default location
-        });
-      } else {
-        console.log('Geolocation is not supported by this browser.');
-        // Provide a default location or prompt user for a location
-      }
-    });
-  </script>
+  
   <script src="./js/bootstrap.bundle.min.js"></script>
   <script src="./js/index.js"></script>
   <script src="./js/api.js"></script>

@@ -130,12 +130,12 @@ body {
 
 
 h3 {
-    color: #007bff; /* Primary color for headings */
+    color: #007bff; 
     margin-bottom: 1rem;
 }
 
 p {
-    color: #6c757d; /* Muted text color for paragraphs */
+    color: #6c757d; 
     margin-bottom: 1.5rem;
 }
 
@@ -144,31 +144,31 @@ p {
 }
 
 .form-control {
-    border-radius: 30px; /* Rounded edges for input */
+    border-radius: 30px; 
     padding: 1rem;
     border: 1px solid #ced4da;
-    font-size: 1rem; /* Adjust as needed */
+    font-size: 1rem; 
 }
 
 .btn-primary {
-    border-radius: 30px; /* Rounded edges for button */
+    border-radius: 30px; 
     padding: 0.75rem 1.5rem;
     color: #fff;
-    background-color: #007bff; /* Bootstrap primary color */
+    background-color: #007bff; 
     border-color: #007bff;
-    font-size: 1rem; /* Adjust as needed */
+    font-size: 1rem; 
     cursor: pointer;
     transition: background-color 0.3s ease-in-out;
 }
 
 .btn-primary:hover {
-    background-color: #0056b3; /* Darker shade on hover */
+    background-color: #0056b3; 
     border-color: #0056b3;
 }
 
 .social-icons {
     display: flex;
-    justify-content: flex-end; /* Align icons to the right */
+    justify-content: flex-end; 
     padding: 0;
     list-style: none;
 }
@@ -178,40 +178,40 @@ p {
     text-decoration: none;
     align-items: center;
     justify-content: center;
-    width: 40px; /* Size of the icons */
-    height: 40px; /* Size of the icons */
-    margin-left: 10px; /* Space between icons */
-    border-radius: 50%; /* Makes icons rounded */
-    color: #ffffff; /* Icon color */
-    background-color: #007bff; /* Background color */
-    transition: background-color 0.3s, transform 0.3s; /* Smooth transition for hover effects */
+    width: 40px; 
+    height: 40px; 
+    margin-left: 10px; 
+    border-radius: 50%; 
+    color: #ffffff; 
+    background-color: #007bff; 
+    transition: background-color 0.3s, transform 0.3s; 
 }
 
 .social-icon:hover {
-    background-color: #0056b3; /* Darker shade on hover */
-    transform: scale(1.1); /* Slightly increase size on hover */
+    background-color: #0056b3; 
+    transform: scale(1.1); 
 }
 
 .social-icon i {
-    font-size: 20px; /* Icon size */
+    font-size: 20px;
 }
 @media (max-width: 768px) {
     .social-icons {
-        justify-content: center; /* Center social icons on small screens */
+        justify-content: center; 
     }
 
     .row > div {
-        text-align: center; /* Center text for all divs inside row */
+        text-align: center; 
     }
 
     .row .col-md-6 {
         display: flex;
         flex-direction: column;
-        align-items: center; /* Center content within columns */
+        align-items: center; 
     }
 
     .social-icon {
-        margin: 0 5px; /* Adjust spacing between icons for smaller screens */
+        margin: 0 5px; 
     }
 }
 

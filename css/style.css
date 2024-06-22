@@ -1,0 +1,243 @@
+body {
+  background-color: #ededd6;
+}
+.navbar-logo {
+  max-height: 50px;
+  max-width: 100%;
+  height: auto;
+}
+
+.navbar-collapse {
+  justify-content: center;
+}
+
+.nav-link.active {
+  color: #fff;
+  background-color: #007BFF;
+  border-radius: 5px;
+  padding: 5px 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+.nav-link:hover,
+.nav-link:focus {
+  background-color: #007BFF;
+  color: white;
+  text-decoration: none;
+  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.15);
+}
+.navbar-tagline {
+  display: block;
+  font-size: 1rem;
+  color: #8d8888;
+  font-weight: normal;
+}
+
+/* Center items in the navbar-collapse */
+.navbar-collapse {
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 991px) {
+  .navbar-nav {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+  }
+  .nav-link {
+    margin-bottom: 5px;
+    padding: 5px;
+  }
+}
+
+/* End Navbar */
+
+/* Start Search Box*/
+.searchBtn{
+    background-color: #f8f9fa;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin-left: 10px;
+    color: #495057;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+/* End Search Box*/
+
+/* start Weather Result */
+
+.weather-card {
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    font-family: 'Arial', sans-serif;
+}
+
+.weather-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.card-header {
+    background-color: #007bff;
+    color: #fff;
+    font-size: 1.2rem;
+    padding: 10px 0;
+}
+
+.card-title {
+    margin: 10px 0;
+    font-size: 1.5rem;
+    color: #343a40;
+}
+
+.weather-degree {
+    font-size: 2.5rem;
+    color: #ff9800;
+    margin: 5px 0;
+}
+
+.weather-icon {
+    font-size: 3rem;
+    color: #ffeb3b;
+}
+
+.weather-condition {
+    font-size: 1.2rem;
+    color: #6c757d;
+    margin-bottom: 15px;
+}
+
+.card-footer {
+    background-color: #f8f9fa;
+    color: #343a40;
+    font-size: 1rem;
+    padding: 10px 0;
+}
+
+.weather-detail-icon {
+    margin-right: 10px;
+    color: #007bff;
+}
+/* End Weather Result */
+
+/* Start Subscribe To Email */
+
+
+h3 {
+    color: #007bff; /* Primary color for headings */
+    margin-bottom: 1rem;
+}
+
+p {
+    color: #6c757d; /* Muted text color for paragraphs */
+    margin-bottom: 1.5rem;
+}
+
+.input-group {
+    position: relative;
+}
+
+.form-control {
+    border-radius: 30px; /* Rounded edges for input */
+    padding: 1rem;
+    border: 1px solid #ced4da;
+    font-size: 1rem; /* Adjust as needed */
+}
+
+.btn-primary {
+    border-radius: 30px; /* Rounded edges for button */
+    padding: 0.75rem 1.5rem;
+    color: #fff;
+    background-color: #007bff; /* Bootstrap primary color */
+    border-color: #007bff;
+    font-size: 1rem; /* Adjust as needed */
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+    border-color: #0056b3;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: flex-end; /* Align icons to the right */
+    padding: 0;
+    list-style: none;
+}
+
+.social-icon {
+    display: flex;
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+    width: 40px; /* Size of the icons */
+    height: 40px; /* Size of the icons */
+    margin-left: 10px; /* Space between icons */
+    border-radius: 50%; /* Makes icons rounded */
+    color: #ffffff; /* Icon color */
+    background-color: #007bff; /* Background color */
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transition for hover effects */
+}
+
+.social-icon:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+    transform: scale(1.1); /* Slightly increase size on hover */
+}
+
+.social-icon i {
+    font-size: 20px; /* Icon size */
+}
+@media (max-width: 768px) {
+    .social-icons {
+        justify-content: center; /* Center social icons on small screens */
+    }
+
+    .row > div {
+        text-align: center; /* Center text for all divs inside row */
+    }
+
+    .row .col-md-6 {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Center content within columns */
+    }
+
+    .social-icon {
+        margin: 0 5px; /* Adjust spacing between icons for smaller screens */
+    }
+}
+
+/* End Subscribe To Email */
+
+/*Start Footer*/
+.go-top {
+    position: absolute;
+    bottom: 0; /* Adjust this value as needed to position the icon correctly */
+    right: 20px;
+    background-color: #007bff;
+    color: #fff;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 50px;
+    font-size: 22px;
+    cursor: pointer;
+    z-index: 1000;
+    transition: opacity 0.3s;
+    opacity: 0.5;
+    margin: 5px;
+    margin-top: 5px;
+}
+
+.go-top:hover {
+    opacity: 1;
+}

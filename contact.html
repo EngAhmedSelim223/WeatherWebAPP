@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WeatherApp</title>
+    <link rel="icon" href="./imgs/logo.png">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <link rel="stylesheet" href="./css/fontawesome.min.css  " />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/contact.css" />
+</head>
+
+<body>
+<!-- Start Navbar -->
+<div class="container mt-3">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid justify-content-between">
+        <a class="navbar-brand" href="#">
+          <img class="navbar-logo" src="./imgs/logo.png" alt="logo-image">
+          <span class="navbar-tagline">Your Weather, Your Way</span> <!-- Tagline added here -->
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav ms-auto">
+            <a class="nav-link active ms-2" aria-current="page" href="#">Home</a>
+            <a class="nav-link ms-2" href="#">News</a>
+            <a class="nav-link ms-2" href="#">Live Cameras</a>
+            <a class="nav-link ms-2" href="#">Photos</a>
+            <a class="nav-link ms-2" href="#">Contact</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>
+  <!-- End Navbar -->
+
+<div class="container">
+    <h1 class="text-primary text-center mt-3 mb-3">Contact Us</h1>
+    <div class="row">
+        <!-- Map Column -->
+        <div class="col-md-6 col-sm-12">
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d243647.3164094762!2d-74.2598657!3d40.6976701!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2s!4v1652901956709!5m2!1sen!2s" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+        <!-- Contact Info and Form Column -->
+        <div class="col-md-6 col-sm-12">
+            <!-- Contact Info Section -->
+            <div class="footer-column">
+                <div class="tile-content">
+                    <h1>Meet Us</h1>
+                    <div class="contact-row">
+                        <i class="fas fa-phone"></i><span class="tile-field">+466723723666</span>
+                    </div>
+                    <div class="contact-row">
+                        <i class="fas fa-at"></i><span class="tile-field">contact@admin.com</span>
+                    </div>
+                    <div class="contact-row">
+                        <i class="fas fa-map-marker-alt"></i><span class="tile-field">1784 Griffin Street, Alabama</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Contact Form Section -->
+            <div class="footer-column contact-form-container">
+                <div class="tile-content">
+                    <form method="">
+                        <h1>Contact</h1>
+                        <div class="contact-row">
+                            <input type="text" class="form-field w-100" placeholder="Name">
+                        </div>
+                        <div class="contact-row">
+                            <textarea rows="5" class="form-field w-100" placeholder="Message"></textarea>
+                        </div>
+                        <button class="button">Send</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+  <script src="./js/bootstrap.bundle.min.js"></script>
+  <script src="./js/index.js"></script>
+</body>
+
+</html>

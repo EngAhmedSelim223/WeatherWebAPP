@@ -15,7 +15,7 @@
 </head>
 
 <body>
- 
+
   <div id="overlay" style="display: none;">
     <div id="loadingSpinner" class="spinner-border text-primary" role="status" style="display: none;">
       <span class="sr-only">Loading...</span>
@@ -65,19 +65,19 @@
     <div class="row">
       <div class="col-lg-4 col-md-6 col-sm-12">
         <div class="weather-card card text-center w-100" id="currentDayCard">
-        
+
         </div>
       </div>
 
       <div class="col-lg-4 col-md-6 col-sm-12">
         <div class="weather-card card text-center w-100" id="forcastDay1">
-          
+
         </div>
       </div>
 
       <div class="col-lg-4 col-md-6 col-sm-12">
         <div class="weather-card card text-center w-100" id="forcastDay2">
-        
+
         </div>
       </div>
     </div>
@@ -121,22 +121,22 @@
   <!-- End Footer -->
   <script>
     document.addEventListener('DOMContentLoaded', async () => {
-  if ('geolocation' in navigator) {
-    navigator.geolocation.getCurrentPosition(async (position) => {
-      const { latitude, longitude } = position.coords;
-      // Assuming getWeatherToday can accept latitude and longitude as input
-      // If not, you might need to use a service to convert coords to a city name
-      const weatherData = await getWeatherToday(`${latitude},${longitude}`);
-      displayWeather(weatherData);
-    }, (error) => {
-      console.error('Geolocation error:', error);
-      // Handle error or provide a default location
+      if ('geolocation' in navigator) {
+        navigator.geolocation.getCurrentPosition(async (position) => {
+          const { latitude, longitude } = position.coords;
+          // Assuming getWeatherToday can accept latitude and longitude as input
+          // If not, you might need to use a service to convert coords to a city name
+          const weatherData = await getWeatherToday(`${latitude},${longitude}`);
+          displayWeather(weatherData);
+        }, (error) => {
+          console.error('Geolocation error:', error);
+          // Handle error or provide a default location
+        });
+      } else {
+        console.log('Geolocation is not supported by this browser.');
+        // Provide a default location or prompt user for a location
+      }
     });
-  } else {
-    console.log('Geolocation is not supported by this browser.');
-    // Provide a default location or prompt user for a location
-  }
-});
   </script>
   <script src="./js/bootstrap.bundle.min.js"></script>
   <script src="./js/index.js"></script>

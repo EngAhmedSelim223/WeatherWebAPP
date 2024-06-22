@@ -15,6 +15,12 @@
 </head>
 
 <body>
+ 
+  <div id="overlay" style="display: none;">
+    <div id="loadingSpinner" class="spinner-border text-primary" role="status" style="display: none;">
+      <span class="sr-only">Loading...</span>
+    </div>
+  </div>
   <!-- Start Navbar -->
   <div class="container mt-3">
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
@@ -46,8 +52,8 @@
     <div class="row">
       <div class="col">
         <div class="inner d-flex flex-column justify-content-center align-items-center">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-primary w-50 mt-2 searchBtn" type="submit">Search</button>
+          <input id="searchInput" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button id="searchBtn" class="btn btn-outline-primary w-50 mt-2 searchBtn" type="submit">Search</button>
         </div>
       </div>
     </div>
@@ -58,59 +64,20 @@
   <div class="container mt-5">
     <div class="row">
       <div class="col-lg-4 col-md-6 col-sm-12">
-        <div class="weather-card card text-center w-100">
-          <div class="card-header">
-            Monday
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">City Name</h5>
-            <h2 class="weather-degree">25°C</h2>
-            <i class="fas fa-sun weather-icon"></i>
-            <p class="weather-condition">Sunny</p>
-          </div>
-          <div class="card-footer">
-            <i class="fas fa-umbrella weather-detail-icon"></i> 20%
-            <i class="fas fa-wind weather-detail-icon"></i> 10 km/h
-            <i class="fas fa-compass weather-detail-icon"></i> East
-          </div>
+        <div class="weather-card card text-center w-100" id="currentDayCard">
+        
         </div>
       </div>
 
       <div class="col-lg-4 col-md-6 col-sm-12">
-        <div class="weather-card card text-center w-100">
-          <div class="card-header">
-            Monday
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">City Name</h5>
-            <h2 class="weather-degree">25°C</h2>
-            <i class="fas fa-sun weather-icon"></i>
-            <p class="weather-condition">Sunny</p>
-          </div>
-          <div class="card-footer">
-            <i class="fas fa-umbrella weather-detail-icon"></i> 20%
-            <i class="fas fa-wind weather-detail-icon"></i> 10 km/h
-            <i class="fas fa-compass weather-detail-icon"></i> East
-          </div>
+        <div class="weather-card card text-center w-100" id="forcastDay1">
+          
         </div>
       </div>
 
       <div class="col-lg-4 col-md-6 col-sm-12">
-        <div class="weather-card card text-center w-100">
-          <div class="card-header">
-            Monday
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">City Name</h5>
-            <h2 class="weather-degree">25°C</h2>
-            <i class="fas fa-sun weather-icon"></i>
-            <p class="weather-condition">Sunny</p>
-          </div>
-          <div class="card-footer">
-            <i class="fas fa-umbrella weather-detail-icon"></i> 20%
-            <i class="fas fa-wind weather-detail-icon"></i> 10 km/h
-            <i class="fas fa-compass weather-detail-icon"></i> East
-          </div>
+        <div class="weather-card card text-center w-100" id="forcastDay2">
+        
         </div>
       </div>
     </div>
@@ -152,9 +119,28 @@
     </a>
   </footer>
   <!-- End Footer -->
-
+  <script>
+    document.addEventListener('DOMContentLoaded', async () => {
+  if ('geolocation' in navigator) {
+    navigator.geolocation.getCurrentPosition(async (position) => {
+      const { latitude, longitude } = position.coords;
+      // Assuming getWeatherToday can accept latitude and longitude as input
+      // If not, you might need to use a service to convert coords to a city name
+      const weatherData = await getWeatherToday(`${latitude},${longitude}`);
+      displayWeather(weatherData);
+    }, (error) => {
+      console.error('Geolocation error:', error);
+      // Handle error or provide a default location
+    });
+  } else {
+    console.log('Geolocation is not supported by this browser.');
+    // Provide a default location or prompt user for a location
+  }
+});
+  </script>
   <script src="./js/bootstrap.bundle.min.js"></script>
   <script src="./js/index.js"></script>
+  <script src="./js/api.js"></script>
 </body>
 
 </html>

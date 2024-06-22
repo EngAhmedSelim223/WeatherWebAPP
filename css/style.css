@@ -1,6 +1,41 @@
 body {
   background-color: #ededd6;
 }
+
+#overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+#loadingSpinner {
+  animation: spin 2s linear infinite;
+  z-index: 3;
+  width: 50px;
+  height: 50px;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 .navbar-logo {
   max-height: 50px;
   max-width: 100%;
@@ -13,7 +48,7 @@ body {
 
 .nav-link.active {
   color: #fff;
-  background-color: #007BFF;
+  background-color: #007bff;
   border-radius: 5px;
   padding: 5px 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -23,7 +58,7 @@ body {
 
 .nav-link:hover,
 .nav-link:focus {
-  background-color: #007BFF;
+  background-color: #007bff;
   color: white;
   text-decoration: none;
   box-shadow: 0 5px 8px rgba(0, 0, 0, 0.15);
@@ -56,188 +91,187 @@ body {
 /* End Navbar */
 
 /* Start Search Box*/
-.searchBtn{
-    background-color: #f8f9fa;
-    border: 1px solid #ced4da;
-    border-radius: 5px;
-    padding: 5px 10px;
-    margin-left: 10px;
-    color: #495057;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: all 0.3s ease;
+.searchBtn {
+  background-color: #f8f9fa;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+  padding: 5px 10px;
+  margin-left: 10px;
+  color: #495057;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 /* End Search Box*/
 
 /* start Weather Result */
 
 .weather-card {
-    margin-top: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out;
-    font-family: 'Arial', sans-serif;
+  margin-top: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  font-family: "Arial", sans-serif;
 }
 
 .weather-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  transform: translateY(-10px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
 .card-header {
-    background-color: #007bff;
-    color: #fff;
-    font-size: 1.2rem;
-    padding: 10px 0;
+  background-color: #007bff;
+  color: #fff;
+  font-size: 1.2rem;
+  padding: 10px 0;
 }
 
 .card-title {
-    margin: 10px 0;
-    font-size: 1.5rem;
-    color: #343a40;
+  margin: 10px 0;
+  font-size: 1.5rem;
+  color: #343a40;
 }
 
 .weather-degree {
-    font-size: 2.5rem;
-    color: #ff9800;
-    margin: 5px 0;
+  font-size: 2.5rem;
+  color: #ff9800;
+  margin: 5px 0;
 }
 
 .weather-icon {
-    font-size: 3rem;
-    color: #ffeb3b;
+  font-size: 3rem;
+  color: #ffeb3b;
 }
 
 .weather-condition {
-    font-size: 1.2rem;
-    color: #6c757d;
-    margin-bottom: 15px;
+  font-size: 1.2rem;
+  color: #6c757d;
+  margin-bottom: 15px;
 }
 
 .card-footer {
-    background-color: #f8f9fa;
-    color: #343a40;
-    font-size: 1rem;
-    padding: 10px 0;
+  background-color: #f8f9fa;
+  color: #343a40;
+  font-size: 1rem;
+  padding: 10px 0;
 }
 
 .weather-detail-icon {
-    margin-right: 10px;
-    color: #007bff;
+  margin-right: 10px;
+  color: #007bff;
 }
 /* End Weather Result */
 
 /* Start Subscribe To Email */
 
-
 h3 {
-    color: #007bff; 
-    margin-bottom: 1rem;
+  color: #007bff;
+  margin-bottom: 1rem;
 }
 
 p {
-    color: #6c757d; 
-    margin-bottom: 1.5rem;
+  color: #6c757d;
+  margin-bottom: 1.5rem;
 }
 
 .input-group {
-    position: relative;
+  position: relative;
 }
 
 .form-control {
-    border-radius: 30px; 
-    padding: 1rem;
-    border: 1px solid #ced4da;
-    font-size: 1rem; 
+  border-radius: 30px;
+  padding: 1rem;
+  border: 1px solid #ced4da;
+  font-size: 1rem;
 }
 
 .btn-primary {
-    border-radius: 30px; 
-    padding: 0.75rem 1.5rem;
-    color: #fff;
-    background-color: #007bff; 
-    border-color: #007bff;
-    font-size: 1rem; 
-    cursor: pointer;
-    transition: background-color 0.3s ease-in-out;
+  border-radius: 30px;
+  padding: 0.75rem 1.5rem;
+  color: #fff;
+  background-color: #007bff;
+  border-color: #007bff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
 }
 
 .btn-primary:hover {
-    background-color: #0056b3; 
-    border-color: #0056b3;
+  background-color: #0056b3;
+  border-color: #0056b3;
 }
 
 .social-icons {
-    display: flex;
-    justify-content: flex-end; 
-    padding: 0;
-    list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  padding: 0;
+  list-style: none;
 }
 
 .social-icon {
-    display: flex;
-    text-decoration: none;
-    align-items: center;
-    justify-content: center;
-    width: 40px; 
-    height: 40px; 
-    margin-left: 10px; 
-    border-radius: 50%; 
-    color: #ffffff; 
-    background-color: #007bff; 
-    transition: background-color 0.3s, transform 0.3s; 
+  display: flex;
+  text-decoration: none;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  margin-left: 10px;
+  border-radius: 50%;
+  color: #ffffff;
+  background-color: #007bff;
+  transition: background-color 0.3s, transform 0.3s;
 }
 
 .social-icon:hover {
-    background-color: #0056b3; 
-    transform: scale(1.1); 
+  background-color: #0056b3;
+  transform: scale(1.1);
 }
 
 .social-icon i {
-    font-size: 20px;
+  font-size: 20px;
 }
 @media (max-width: 768px) {
-    .social-icons {
-        justify-content: center; 
-    }
+  .social-icons {
+    justify-content: center;
+  }
 
-    .row > div {
-        text-align: center; 
-    }
+  .row > div {
+    text-align: center;
+  }
 
-    .row .col-md-6 {
-        display: flex;
-        flex-direction: column;
-        align-items: center; 
-    }
+  .row .col-md-6 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 
-    .social-icon {
-        margin: 0 5px; 
-    }
+  .social-icon {
+    margin: 0 5px;
+  }
 }
 
 /* End Subscribe To Email */
 
 /*Start Footer*/
 .go-top {
-    position: absolute;
-    bottom: 0; /* Adjust this value as needed to position the icon correctly */
-    right: 20px;
-    background-color: #007bff;
-    color: #fff;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    text-align: center;
-    line-height: 50px;
-    font-size: 22px;
-    cursor: pointer;
-    z-index: 1000;
-    transition: opacity 0.3s;
-    opacity: 0.5;
-    margin: 5px;
-    margin-top: 5px;
+  position: absolute;
+  bottom: 0; /* Adjust this value as needed to position the icon correctly */
+  right: 20px;
+  background-color: #007bff;
+  color: #fff;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 50px;
+  font-size: 22px;
+  cursor: pointer;
+  z-index: 1000;
+  transition: opacity 0.3s;
+  opacity: 0.5;
+  margin: 5px;
+  margin-top: 5px;
 }
 
 .go-top:hover {
-    opacity: 1;
+  opacity: 1;
 }
